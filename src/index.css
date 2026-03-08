@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --shell-bg: #f7f0e8;
+  --hero-bg:
+    radial-gradient(circle at top left, rgba(210, 174, 129, 0.46), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(48, 28, 16, 0.16), transparent 22%),
+    linear-gradient(135deg, #fbf3eb 0%, #f4e4d4 42%, #ebd3ba 100%);
+  --brand-pink: #8b5936;
+  --brand-rose-light: #ddb787;
+  --soft-pink: #f0e0cf;
+  --soft-cream: #fbf5ed;
+  --text-main: #23150e;
+  --text-soft: #6d5a4b;
+  --shadow-soft: 0 28px 90px rgba(50, 28, 16, 0.11);
+  --cocoa-deep: #2b1810;
+  --cocoa-mid: #5f3b28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(218, 184, 142, 0.42), transparent 22%),
+    radial-gradient(circle at 90% 8%, rgba(43, 24, 16, 0.08), transparent 18%),
+    linear-gradient(180deg, #fbf6f0 0%, #f4eadf 40%, #fffdf9 100%);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-size: 82px 82px;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 82%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(139, 89, 54, 0.6);
+  box-shadow: 0 0 0 4px rgba(139, 89, 54, 0.12);
+}
+
+::selection {
+  background: rgba(139, 89, 54, 0.18);
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-float {
+  animation: heroFloat 9s ease-in-out infinite;
+}
+
+.hero-float-delayed {
+  animation: heroFloat 11s ease-in-out infinite;
+  animation-delay: 1.3s;
+}
