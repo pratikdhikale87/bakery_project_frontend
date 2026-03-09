@@ -8,15 +8,15 @@
     radial-gradient(circle at top left, rgba(210, 174, 129, 0.46), transparent 30%),
     radial-gradient(circle at 88% 16%, rgba(48, 28, 16, 0.16), transparent 22%),
     linear-gradient(135deg, #fbf3eb 0%, #f4e4d4 42%, #ebd3ba 100%);
-  --brand-pink: #8b5936;
+  --brand-pink: #dfa5a4;  /*link colors */
   --brand-rose-light: #ddb787;
   --soft-pink: #f0e0cf;
   --soft-cream: #fbf5ed;
   --text-main: #23150e;
   --text-soft: #6d5a4b;
   --shadow-soft: 0 28px 90px rgba(50, 28, 16, 0.11);
-  --cocoa-deep: #2b1810;
-  --cocoa-mid: #5f3b28;
+  --cocoa-deep: #dabfbe;    /* cart/ admin/ button color */
+  --cocoa-mid: #dfa5a4;
 }
 
 * {

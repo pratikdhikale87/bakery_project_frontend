@@ -29,16 +29,17 @@ function LandingPage() {
                 Bakery storefront that feels premium the moment it opens.
               </h1>
               <p className="max-w-2xl text-base leading-7 text-[var(--text-soft)] sm:text-lg">
-                Rosy Oven now has a stronger editorial theme: richer hero storytelling, visual
-                category cards, quick ordering, dashboards, and a polished pink-black-white finish
-                built to look more like a live boutique bakery brand.
+                Rosy Oven now has a stronger editorial theme: richer hero
+                storytelling, visual category cards, quick ordering, dashboards,
+                and a polished pink-black-white finish built to look more like a
+                live boutique bakery brand.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-pink)] hover:text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--cocoa-deep)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-pink)] hover:text-white"
               >
                 Explore the menu
                 <ArrowRight className="h-4 w-4" />
@@ -55,17 +56,23 @@ function LandingPage() {
               <div className="rounded-[28px] border border-white/70 bg-white/85 p-4 backdrop-blur-sm">
                 <Truck className="h-5 w-5 text-[var(--brand-pink)]" />
                 <p className="mt-3 text-2xl font-semibold">45 min</p>
-                <p className="mt-1 text-sm text-[var(--text-soft)]">Average delivery promise</p>
+                <p className="mt-1 text-sm text-[var(--text-soft)]">
+                  Average delivery promise
+                </p>
               </div>
               <div className="rounded-[28px] border border-white/70 bg-white/85 p-4 backdrop-blur-sm">
                 <ShieldCheck className="h-5 w-5 text-[var(--brand-pink)]" />
                 <p className="mt-3 text-2xl font-semibold">Fresh sealed</p>
-                <p className="mt-1 text-sm text-[var(--text-soft)]">Packed for safe transport</p>
+                <p className="mt-1 text-sm text-[var(--text-soft)]">
+                  Packed for safe transport
+                </p>
               </div>
               <div className="rounded-[28px] border border-white/70 bg-white/85 p-4 backdrop-blur-sm">
                 <Star className="h-5 w-5 text-[var(--brand-pink)]" />
                 <p className="mt-3 text-2xl font-semibold">4.8+</p>
-                <p className="mt-1 text-sm text-[var(--text-soft)]">Average product rating</p>
+                <p className="mt-1 text-sm text-[var(--text-soft)]">
+                  Average product rating
+                </p>
               </div>
             </div>
 
@@ -75,7 +82,9 @@ function LandingPage() {
                   <p className="text-xs uppercase tracking-[0.28em] text-white/55">
                     Today&apos;s bakery window
                   </p>
-                  <p className="mt-2 text-2xl font-semibold">Freshly baked, packed, then delivered</p>
+                  <p className="mt-2 text-2xl font-semibold">
+                    Freshly baked, packed, then delivered
+                  </p>
                 </div>
                 <p className="rounded-full border border-white/10 px-4 py-2 text-sm text-white/80">
                   Same-day cakes and gifting boxes
@@ -88,7 +97,7 @@ function LandingPage() {
             <article className="hero-float relative min-h-[420px] overflow-hidden rounded-[38px] bg-black shadow-[0_35px_100px_rgba(17,17,17,0.16)]">
               <img
                 src={heroProduct?.images[0] ?? categories[0]?.image}
-                alt={heroProduct?.name ?? 'Bakery spotlight'}
+                alt={heroProduct?.name ?? "Bakery spotlight"}
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.05),rgba(17,17,17,0.76))]" />
@@ -104,14 +113,14 @@ function LandingPage() {
 
                 <div>
                   <p className="text-sm uppercase tracking-[0.28em] text-white/70">
-                    {heroProduct?.badge ?? 'Best Seller'}
+                    {heroProduct?.badge ?? "Best Seller"}
                   </p>
                   <h2 className="mt-3 max-w-sm font-serif text-4xl leading-tight">
-                    {heroProduct?.name ?? 'Berry Velvet Cake'}
+                    {heroProduct?.name ?? "Berry Velvet Cake"}
                   </h2>
                   <p className="mt-3 max-w-sm text-sm leading-6 text-white/75">
                     {heroProduct?.tagline ??
-                      'Soft sponge, glossy finish, and a storefront-first presentation.'}
+                      "Soft sponge, glossy finish, and a storefront-first presentation."}
                   </p>
                 </div>
               </div>
@@ -121,7 +130,7 @@ function LandingPage() {
               {collageCategories.map((category, index) => (
                 <article
                   key={category.id}
-                  className={`${index === 1 ? 'hero-float-delayed' : 'hero-float'} relative min-h-[132px] overflow-hidden rounded-[30px] border border-white/60 bg-white shadow-[0_24px_70px_rgba(17,17,17,0.08)]`}
+                  className={`${index === 1 ? "hero-float-delayed" : "hero-float"} relative min-h-[132px] overflow-hidden rounded-[30px] border border-white/60 bg-white shadow-[0_24px_70px_rgba(17,17,17,0.08)]`}
                 >
                   <img
                     src={category.image}
@@ -135,8 +144,12 @@ function LandingPage() {
                     </p>
                     <div className="mt-2 flex items-end justify-between gap-3">
                       <div>
-                        <h3 className="text-xl font-semibold">{category.label}</h3>
-                        <p className="mt-1 text-xs text-white/75">{category.accentLine}</p>
+                        <h3 className="text-xl font-semibold">
+                          {category.label}
+                        </h3>
+                        <p className="mt-1 text-xs text-white/75">
+                          {category.accentLine}
+                        </p>
                       </div>
                       <Link
                         to={`/products?category=${category.id}`}
@@ -165,8 +178,9 @@ function LandingPage() {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-6 text-[var(--text-soft)] sm:text-base">
-            Each category now has its own bakery image so users instantly understand what is inside
-            cakes, pastries, biscuits, and breads before opening the products page.
+            Each category now has its own bakery image so users instantly
+            understand what is inside cakes, pastries, biscuits, and breads
+            before opening the products page.
           </p>
         </div>
 
@@ -188,14 +202,22 @@ function LandingPage() {
                   {category.shortLabel}
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                  <p className="text-xs uppercase tracking-[0.26em] text-white/70">{category.stat}</p>
-                  <h3 className="mt-2 text-2xl font-semibold">{category.label}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/78">{category.description}</p>
+                  <p className="text-xs uppercase tracking-[0.26em] text-white/70">
+                    {category.stat}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold">
+                    {category.label}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-white/78">
+                    {category.description}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center justify-between gap-3 bg-white px-5 py-4">
                 <div>
-                  <p className="text-sm font-semibold text-[var(--text-main)]">{category.headline}</p>
+                  <p className="text-sm font-semibold text-[var(--text-main)]">
+                    {category.headline}
+                  </p>
                   <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[var(--text-soft)]">
                     {category.accentLine}
                   </p>
@@ -213,13 +235,16 @@ function LandingPage() {
       <section className="overflow-hidden rounded-[42px] bg-[linear-gradient(135deg,#111111_0%,#2a0d16_100%)] px-6 py-8 text-white shadow-[0_32px_100px_rgba(17,17,17,0.18)] sm:px-8 lg:px-10">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.28em] text-white/55">Delivery Flow</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-white/55">
+              Delivery Flow
+            </p>
             <h2 className="mt-2 font-serif text-3xl sm:text-4xl">
               Freshly baked to packed to delivered
             </h2>
             <p className="mt-3 text-sm leading-6 text-white/70 sm:text-base">
-              The landing page now presents the delivery journey inside a darker premium panel so
-              the process feels more like a live bakery brand than a plain brochure layout.
+              The landing page now presents the delivery journey inside a darker
+              premium panel so the process feels more like a live bakery brand
+              than a plain brochure layout.
             </p>
           </div>
           <p className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/75">
@@ -237,7 +262,9 @@ function LandingPage() {
                 0{index + 1}
               </div>
               <h3 className="mt-5 text-xl font-semibold">{step.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-white/70">{step.text}</p>
+              <p className="mt-3 text-sm leading-6 text-white/70">
+                {step.text}
+              </p>
               {index < deliverySteps.length - 1 ? (
                 <div className="absolute right-[-18px] top-1/2 hidden h-[2px] w-9 -translate-y-1/2 bg-[var(--brand-rose-light)] lg:block" />
               ) : null}
@@ -270,13 +297,19 @@ function LandingPage() {
             <div
               key={item.name}
               className={`rounded-[32px] border border-black/10 p-6 shadow-[0_18px_60px_rgba(17,17,17,0.05)] ${
-                index === 1 ? 'bg-[var(--soft-pink)]' : 'bg-white'
+                index === 1 ? "bg-[var(--soft-pink)]" : "bg-white"
               }`}
             >
-              <p className="text-base leading-7 text-[var(--text-main)]">&ldquo;{item.quote}&rdquo;</p>
+              <p className="text-base leading-7 text-[var(--text-main)]">
+                &ldquo;{item.quote}&rdquo;
+              </p>
               <div className="mt-6 border-t border-black/10 pt-4">
-                <p className="font-semibold text-[var(--text-main)]">{item.name}</p>
-                <p className="mt-1 text-sm text-[var(--text-soft)]">{item.role}</p>
+                <p className="font-semibold text-[var(--text-main)]">
+                  {item.name}
+                </p>
+                <p className="mt-1 text-sm text-[var(--text-soft)]">
+                  {item.role}
+                </p>
               </div>
             </div>
           ))}
@@ -294,8 +327,8 @@ function LandingPage() {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-6 text-[var(--text-soft)]">
-            Users can add to cart or use the direct quick-buy action without adding products to the
-            cart first.
+            Users can add to cart or use the direct quick-buy action without
+            adding products to the cart first.
           </p>
         </div>
 
@@ -306,7 +339,7 @@ function LandingPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default LandingPage

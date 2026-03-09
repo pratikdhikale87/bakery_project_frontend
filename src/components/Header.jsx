@@ -16,17 +16,13 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-black/10 bg-white/85 backdrop-blur-xl">
-      <div className="mx-auto flex w-[min(1200px,92vw)] items-center justify-between gap-4 py-4">
-        <Link to="/" onClick={closeMenu} className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--brand-pink),var(--cocoa-deep))] text-sm font-bold text-white shadow-[0_14px_36px_rgba(43,24,16,0.28)]">
-            CA
-          </div>
-          <div>
-            <p className="font-serif text-lg font-semibold text-[var(--text-main)]">Cocoa Atelier</p>
-            <p className="text-xs uppercase tracking-[0.28em] text-[var(--text-soft)]">
-              Chocolate Boutique
-            </p>
-          </div>
+      <div className="mx-auto flex w-[min(1200px,92vw)] items-center justify-between gap-4 ">
+        <Link to="/" onClick={closeMenu} className="">
+            <img
+              src="/logo_2.png"
+              alt="description"
+              style={{ height: "96px", width: "200px" }}
+            />
         </Link>
 
         <nav className="hidden items-center gap-2 rounded-full border border-black/10 bg-white/80 px-2 py-2 lg:flex">
@@ -38,23 +34,23 @@ function Header() {
               className={({ isActive }) =>
                 `rounded-full px-4 py-2 text-sm font-medium transition ${
                   isActive
-                    ? 'bg-[var(--brand-pink)] text-white'
-                    : 'text-[var(--text-soft)] hover:bg-black/5 hover:text-[var(--text-main)]'
+                    ? "bg-[var(--brand-pink)] text-white"
+                    : "text-[var(--text-soft)] hover:bg-black/5 hover:text-[var(--text-main)]"
                 }`
               }
             >
               {item.label}
             </NavLink>
           ))}
-          {currentUser?.role === 'admin' ? (
+          {currentUser?.role === "admin" ? (
             <NavLink
               to="/admin"
               onClick={closeMenu}
               className={({ isActive }) =>
                 `rounded-full px-4 py-2 text-sm font-medium transition ${
                   isActive
-                    ? 'bg-black text-white'
-                    : 'text-[var(--text-soft)] hover:bg-black/5 hover:text-[var(--text-main)]'
+                    ? "bg-black text-white"
+                    : "text-[var(--text-soft)] hover:bg-black/5 hover:text-[var(--text-main)]"
                 }`
               }
             >
@@ -87,7 +83,7 @@ function Header() {
               className="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm font-medium text-[var(--text-main)] transition hover:border-black hover:bg-black hover:text-white"
             >
               <UserRound className="h-4 w-4" />
-              {currentUser.name.split(' ')[0]}
+              {currentUser.name.split(" ")[0]}
             </button>
           ) : (
             <Link
@@ -121,15 +117,15 @@ function Header() {
                 className={({ isActive }) =>
                   `rounded-2xl px-4 py-3 text-sm font-medium ${
                     isActive
-                      ? 'bg-[var(--brand-pink)] text-white'
-                      : 'bg-[var(--soft-pink)] text-[var(--text-main)]'
+                      ? "bg-[var(--brand-pink)] text-white"
+                      : "bg-[var(--soft-pink)] text-[var(--text-main)]"
                   }`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
-            {currentUser?.role === 'admin' ? (
+            {currentUser?.role === "admin" ? (
               <NavLink
                 to="/admin"
                 onClick={closeMenu}
@@ -151,14 +147,14 @@ function Header() {
                 onClick={closeMenu}
                 className="rounded-2xl border border-[var(--brand-pink)] px-4 py-3 text-center text-sm font-medium text-[var(--brand-pink)]"
               >
-                {currentUser ? 'Account' : 'Login'}
+                {currentUser ? "Account" : "Login"}
               </Link>
             </div>
           </div>
         </div>
       ) : null}
     </header>
-  )
+  );
 }
 
 export default Header
